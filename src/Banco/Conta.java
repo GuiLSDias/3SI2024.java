@@ -1,14 +1,13 @@
 package Banco;
 
 public class Conta {
-
-
     private int numero;
     Cliente objCliente = new Cliente();
     private double saldo;
     private double limite;
     private static int totalDeContas;
     private int identificador;
+    private double atualiza;
     Conta(){
         System.out.println("Construindo uma conta");
         totalDeContas = totalDeContas + 1;
@@ -67,7 +66,11 @@ public class Conta {
        this.saldo = this.saldo + quantidade;
    }
 
-   public void transfere(Conta destino, double quantidade) {
+    public void atualiza(double taxa) {
+         this.saldo += this.saldo * taxa;
+    }
+
+    public void transfere(Conta destino, double quantidade) {
        if (this.saca(quantidade)) {
            destino.deposita(quantidade);
        } else {
