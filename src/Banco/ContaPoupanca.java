@@ -6,10 +6,17 @@ public class ContaPoupanca extends Conta{
         super(saldo, limite, numero);
     }
 
-    public void atualiza(double taxa){
+    @Override
+    void atualiza(double taxa) {
+        double rendimento = getSaldo() * taxa;
+        deposita(rendimento);
+
+    }
+
+    /*public void atualiza(double taxa){
         double rendimento = getSaldo() * taxa;
         deposita(rendimento);
         //this.saldo += this.saldo * taxa;
-    }
+    }*/
 
 }

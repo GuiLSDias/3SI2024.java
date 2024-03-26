@@ -2,7 +2,7 @@ package Banco;
 
 public class TesteContas {
     public static void main(String[] args) {
-        Conta c = new Conta();
+        Conta c = new ContaCorrente(0,0,0);
         ContaCorrente cc = new ContaCorrente(100,1000,10);
         ContaPoupanca cp = new ContaPoupanca(100,1000,12);
         c.deposita(1000);

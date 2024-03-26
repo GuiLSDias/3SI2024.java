@@ -2,10 +2,10 @@ package Banco;
 
 public class TesteConstrutor {
     public static void main(String[] args) {
-        Conta z = new Conta();
-        Conta x = new Conta(7000);
-        Conta y = new Conta(2000);
-        Conta w = new Conta(2000, 50000, 12340);
+        Conta z = new ContaCorrente(0,0,0);
+        Conta x = new ContaCorrente(7000,0,0);
+        Conta y = new ContaCorrente(2000,0,0);
+        Conta w = new ContaCorrente(2000, 50000, 12340);
         System.out.println("Saldo x : "+x.getSaldo());
         System.out.println("Saldo y : "+y.getSaldo());
 

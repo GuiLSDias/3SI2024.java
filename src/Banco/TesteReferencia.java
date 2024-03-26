@@ -2,7 +2,7 @@ package Banco;
 
 public class TesteReferencia {
     public static void main(String[] args) {
-        Conta c1 = new Conta();
+        Conta c1 = new ContaCorrente(0,0,0);
         //Cliente cli1 = new Cliente();
         //c1.objCliente = cli1;
         c1.objCliente.setNome("Paola");
