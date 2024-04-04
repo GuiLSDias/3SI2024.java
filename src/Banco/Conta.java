@@ -63,9 +63,13 @@ abstract class Conta {
        }
 
    }
-   public void deposita(double quantidade){
-       this.saldo = this.saldo + quantidade;
-   }
+    void deposita(double valor){
+        if (valor < 0) {
+            throw new ValorInvalidoException(valor);
+        } else {
+            this.saldo += valor - 0.10;
+        }
+    }
 
     abstract void atualiza(double taxa);
 
